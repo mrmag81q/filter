@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.rtl.min.css"
+        integrity="sha384-gXt9imSW0VcJVHezoNQsP+TNrjYXoGcrqBZJpry9zJt8PCQjobwmhMGaDHTASo9N" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" type="text/css"
+		media="all" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"
+		type="text/javascript"></script>
+
+	<script src="./fl.js" type="text/javascript"></script>
+	<link rel="stylesheet" type="text/css" href="./fl.css" />
+</head>
+
+<body>
+    <div class="flex-lg-wrap m-3 p-3"
+        style="background-color:#eee ;width: 300px;height: auto; border: solid 1px;border-color:gray;border-radius: 10px;">
+        <h4>فیلتر ها</h4>
+        <br>
+        <div>
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne"
+                            style="background-color:#eee ;color: black;">
+                            رنگ
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse " aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample" style="background-color:#eee ;">
+                        <div class="accordion-body">
+                            <form>
+                                <div style="display:inline ;">
+                                    <input type="checkbox" id="blue"  onchange="colorch1(this);">
+                                    <label for="vehicle1"><span
+                                            style="margin-right:5px; margin-left: 15px;">آبی</span><span
+                                            class="rounded-circle d-inline-block align-bottom Color_Color__RQViW "
+                                            style="background-color:blue; width: 20px; height: 20px;margin-right: 143px;"></span></label>
+                                </div>
+                                <hr style="color:darkgrey;">
+                                <div style="display:inline ;">
+                                    <input type="checkbox" id="green"  onchange="colorch1(this);">
+                                    <label for="vehicle1"><span
+                                            style="margin-right:5px; margin-left: 15px; ">سبز</span><span
+                                            class="rounded-circle d-inline-block align-bottom Color_Color__RQViW "
+                                            style="background-color:green; width: 20px; height: 20px;margin-right: 140px;"></span></label>
+                                </div>
+                                <hr style="color:darkgrey;">
+                                <div style="display:inline ;">
+                                    <input type="checkbox" id="red" onchange="colorch1(this);">
+                                    <label for="vehicle1"><span
+                                            style="margin-right:5px; margin-left: 15px;">قرمز</span><span
+                                            class="rounded-circle d-inline-block align-bottom Color_Color__RQViW "
+                                            style="background-color:red; width: 20px; height: 20px;margin-right: 135px;"></span></label>
+                                </div><br>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col ">
+                <div class="accordion" id="ersal">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading2">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2"
+                                style="background-color:#eee ;color: black;" >
+                                خدمات ارسال
+                            </button>
+                        </h2>
+                        <div id="collapse2" class="accordion-collapse collapse " aria-labelledby="heading2"
+                            data-bs-parent="#ersal" style="background-color:#eee ;color: black;">
+                            <div class="accordion-body">
+                                <form>
+                                    <div style="display:inline-block ;">
+                                        <input type="checkbox" id="ersalm" name="ersal" value="ersal">
+                                        <label for="vehicle1"><span style="margin-right:5px; margin-left: 15px;">ارسال
+                                                فوری</span><span class="btn-label d-inline-block" style="margin-right:93px ;"><i class="fa fa-rocket"></i></span></label>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row" style="float:right;">
+            <div class="col-10">
+                <p style="margin-right:18px ;">ارسال فروشنده</p>
+            </div>
+            <div class="col-2">
+                <form>
+                    <div class="form-check form-switch" style="margin-right: 26px;">
+                        <input class="form-check-input" type="checkbox" id="mySwitch" name="darkmode" value="yes">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="row">
+            <div class="col ">
+                <div class="accordion" id="gh">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading3">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse2"
+                                style="background-color:#eee ;color: black;">
+                                محدوده قیمت
+                            </button>
+                        </h2>
+                        <div id="collapse3" class="accordion-collapse collapse " aria-labelledby="heading3"
+                            data-bs-parent="#gh" style="background-color:#eee ;">
+                            <div class="accordion-body">
+                                <div class="price-range-block">
+                                    <div id="slider-range" class="price-filter-range" name="rangeInput"></div>
+                                    <div>
+                                        <label for="min_price">از</label>
+                                        <input type="number" min=0 max="55900000" step="100000" oninput="validity.valid||(value='0');" id="min_price"
+                                            class="price-range-field" />
+                                        <label for="min_price" style="float:left;">تومان</label>
+                                        <br>
+                                        <br>
+                                        <label for="max_price" style="margin-right:4px ;">تا</label>
+                                        <input type="number" min=0 max="56000000" step="100000" oninput="validity.valid||(value='56000000');" id="max_price"
+                                            class="price-range-field" />
+                                        <label for="max_price" style="float:left;">تومان</label>
+                                        <br>
+                                        <br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row" style="float:right;">
+            <div class="col-10">
+                <p style="margin-right:18px ;">فقط کالاهای موجود</p>
+            </div>
+            <div class="col-2">
+                <form>
+                    <div class="form-check form-switch" style="margin-right: 12px;">
+                        <input class="form-check-input" type="checkbox" id="fkm" value="yes">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <br><br>
+        <div class="row">
+            <div class="col ">
+                <div class="accordion" id="nf">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headnf">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapsenf" aria-expanded="false" aria-controls="collapsenf"
+                                style="background-color:#eee ;color: black;" >
+                                نوع فروشنده
+                            </button>
+                        </h2>
+                        <div id="collapsenf" class="accordion-collapse collapse " aria-labelledby="headnf"
+                            data-bs-parent="#nf" style="background-color:#eee ;color: black;">
+                            <div class="accordion-body">
+                                <form>
+                                    <div style="display:inline-block ;">
+                                        <input type="checkbox" id="fb" name="fb" value="fb">
+                                        <label for="fb"><span style="margin-right:5px; margin-left: 15px;">فروشنده برگزیده</span></label>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
